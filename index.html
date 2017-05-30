@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+<a-Duck-Suit v="0.3"
+Contributors="Ducky; Brian"/>
+-->
+
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>a-Duck-Suit</title>
+    <meta name="a-FunLand" content="Major Fun">  
+  </head>
+  <body>
+
+    <!-- Start Scene -->
+ 
+    <a-scene altspace="verticalAlign: middle; fullspace: true" vr-mode-ui="enabled: false" sync-system="author: Ducky; app: Gauntlet">
+
+      <!-- Asset Loading -->
+
+      <a-assets>
+
+        <a-asset-item id="stand-mtl" src="stand.mtl"></a-asset-item>
+        <a-asset-item id="stand-obj" src="stand.obj"></a-asset-item>
+      
+      </a-assets>      
+      
+      <a-obj-model id="Stand" scale="1 1 1" src="#stand-obj" mtl="#stand-mtl" position="0 0 0" rotation="0 0 0" n-mesh-collider="type: environment; convex: true" ></a-obj-model>
+      
+
+    </a-scene>
+  </body>
+</html>
