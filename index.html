@@ -28,10 +28,10 @@ Contributors="Bob, maca404"/>
         <a-asset-item id="wheel-obj" src="wheel.obj"></a-asset-item>
       </a-assets>      
      
-      <a-entity id="scene" position="0 -3 0" rotation="0 0 0">
+      <a-entity id="scene" position="0 -3 0" rotation="0 0 0" scale=".1 .1 .1">
 
-        <a-obj-model id="Stand" color="red" scale=".19 .19 .19" src="#stand-obj" position="0 0 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: true" ></a-obj-model>
-        <a-obj-model id="Wheel" color="yellow" scale=".19 .19 .19" src="#wheel-obj" position="0 0 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: true" >
+        <a-obj-model id="Stand" color="red" scale="0 0 0" src="#stand-obj" position="0 0 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: true" ></a-obj-model>
+        <a-obj-model id="Wheel" color="yellow" scale="0 0 0 " src="#wheel-obj" position="0 0 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: true" >
         <a-animation attribute="rotation" dur="60000" easing="linear" repeat="indefinite" from="0 0 0" to="0 0 360"></a-animation>
         </a-obj-model>
 
