@@ -35,12 +35,12 @@ Contributors="Bob, maca404"/>
         <a-obj-model id="Stand" color="red" scale=".1 .1 .1" src="#stand-obj" position="0 0 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: false"></a-obj-model>
         
         <a-entity position="0 63 0">
-         <a-animation attribute="rotation" dur="60000" easing="linear" repeat="indefinite" from="0 0 0" to="0 0 360"></a-animation>  
+          <a-animation attribute="rotation" dur="60000" easing="linear" repeat="indefinite" from="0 0 0" to="0 0 360"></a-animation>  
+          <a-obj-model id="Wheel" color="yellow" scale=".1 .1 .1"  src="#wheel-obj" position="0 -63 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: true" sync sync-transform></a-obj-model>
           <a-entity position="0 -51 0">
-            <a-animation attribute="alternate" dur="60000" easing="linear" repeat="indefinite" from="0 0 0" to="0 0 -360"></a-animation>
-            <a-obj-model id="Basket" color="green" scale=".1 .1 .1"  src="#basket-obj" position="0 -12 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: false" sync sync-transform></a-obj-model>
+              <a-animation attribute="rotation" dur="60000" easing="linear" repeat="indefinite" from="0 0 0" to="0 0 360"></a-animation>  
+              <a-obj-model id="Basket" color="green" scale=".1 .1 .1"  src="#basket-obj" position="0 -12 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: false" sync sync-transform></a-obj-model>
           </a-entity>
-         <a-obj-model id="Wheel" color="yellow" scale=".1 .1 .1"  src="#wheel-obj" position="0 -63 0" rotation="0 0 0" n-mesh-collider="type: hologram; convex: true" sync sync-transform></a-obj-model>
         </a-entity>
 
 
