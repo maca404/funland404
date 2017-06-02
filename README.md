@@ -1,1 +1,2 @@
-# funland404.github.io
+# theGuantlet
+Gauntlet App designed for AltspaceVR
