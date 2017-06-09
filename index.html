@@ -25,6 +25,7 @@
       color: 0x00ff00
     });
     var cube = new THREE.Mesh(geometry, material);
+    cube.position.z = 2;
     
     scene.add(cube);
     //Update & Rendering
@@ -33,7 +34,6 @@
       requestAnimationFrame(render);
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
-      cube.position.z += 2;
       renderer.render(scene);
     }
     
