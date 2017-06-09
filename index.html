@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<!--
-<Funland v="0.0"
-Contributors="Bob, maca404"/>
--->
-
 <html>
-  <head>
+<head>
+	<title>The Place</title>
+  <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
+  <script src="https://sdk.altvr.com/libs/altspace.js/2.4.0/altspace.min.js"></script>
+  <script src="https://cdn.rawgit.com/norybiak/UltimateLoader/v0.4.6/dist/UltimateLoader.min.js"></script>
+  <script src="https://cdn.rawgit.com/Ooblik/AltVRNC/master/dist/AltVRNC.min.js"></script>
+  <script src="https://cdn.rawgit.com/NGenesis/altspacevr-behaviors/7cf658d3/js/NativeComponent.js"></script>
+  <script src="https://tweenjs.github.io/tween.js/src/Tween.js"></script>
+</head>
+<body>
 
-    <meta charset="utf-8">
-    <title>FunLand</title>
-    <meta name="A-FunLand" content="Major Fun">  
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r84/build/three.min.js"></script>
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r84/examples/js/loaders/MTLLoader.js"></script>
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r84/examples/js/loaders/OBJLoader.js"></script>
-    <script src="https://rawgit.com/AltspaceVR/AltspaceSDK/master/dist/altspace.js"></script>
+  <a-scene altspace='fullspace: true'></a-scene>
   
-  </head>
-  <body>
-    <script>
+  <script>
+    
     if (!window.altspace || !window.altspace.inClient) {
       document.write('<h3>To view this example, please open this page in <a href="http://altvr.com"> AltspaceVR </a></h3>');
     }
+    
     var scene = new THREE.Scene();
     var renderer = altspace.getThreeJSRenderer({version:'0.2.0'});
     var geometry = new THREE.BoxGeometry(200, 200, 200);
@@ -28,15 +25,20 @@ Contributors="Bob, maca404"/>
       color: 0x00ff00
     });
     var cube = new THREE.Mesh(geometry, material);
+    
     scene.add(cube);
     //Update & Rendering
+    
     function render() {
       requestAnimationFrame(render);
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
       renderer.render(scene);
     }
+    
     render();
-  </script> 
-  </body>
+  
+
+  </script>
+</body>
 </html>
