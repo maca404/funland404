@@ -18,8 +18,9 @@
       document.write('<h3>To view this example, please open this page in <a href="http://altvr.com"> AltspaceVR </a></h3>');
     }
     
-    var scene = new THREE.Scene();
-    var renderer = altspace.getThreeJSRenderer({version:'0.2.0'});
+    var scene = document.querySelector('a-scene').object3D;
+    var updateRate = 500;
+
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     var material = new THREE.MeshBasicMaterial({
       color: 0x00ff00
@@ -31,10 +32,9 @@
     //Update & Rendering
     
     function render() {
-      requestAnimationFrame(render);
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
-      renderer.render(scene);
+      requestAnimationFrame(render);
     }
     
     render();
