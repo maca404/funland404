@@ -18,17 +18,20 @@
       document.write('<h3>To view this example, please open this page in <a href="http://altvr.com"> AltspaceVR </a></h3>');
     }
     
+    var configTrue = { 
+    convex: true,
+    type: 'environment'
+    };
+
     var scene = document.querySelector('a-scene').object3D;
     var updateRate = 500;
 
     var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var material = new THREE.MeshBasicMaterial({
-      color: 0x00ff00
-    });
+    var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
     var cube = new THREE.Mesh(geometry, material);
-    cube.position.y = 5;
+    cube.position.y = 3.5;
+    new NativeComponent('n-mesh-collider', config, cube).addTo(scene);
     
-    scene.add(cube);
     //Update & Rendering
     
     function render() {
