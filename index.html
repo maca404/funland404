@@ -30,7 +30,7 @@
     UltimateLoader.load('turtle.obj', function(turtle)
     {
       turtle.position.set(1, 1, 1);
-      obj.scale.set(10, 10, 10);
+      turtle.scale.set(10, 10, 10);
       new NativeComponent('n-mesh-collider', configTrue , turtle).addTo(scene);
     });
 
