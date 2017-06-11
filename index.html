@@ -26,17 +26,16 @@
     var scene = document.querySelector('a-scene').object3D;
     var updateRate = 500;
 
-    var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-    var cube = new THREE.Mesh(geometry, material);
-    cube.position.y = 3.5;
-    new NativeComponent('n-mesh-collider', configTrue, cube).addTo(scene);
-    
+        
+    UltimateLoader.load('turtle.obj', function(turtle)
+    {
+      turtle.position.set(1, 1, 1);
+      new NativeComponent('n-mesh-collider', configTrue , turtle).addTo(scene);
+    });
+
+
     //Update & Rendering
-    
     function render() {
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
       requestAnimationFrame(render);
     }
     
