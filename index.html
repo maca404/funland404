@@ -31,10 +31,11 @@
     
 
     function turtle(obj) {
-      turtle.position.set(1, 1, 1);
-      turtle.scale.set(10, 10, 10);
-      new NativeComponent('n-mesh-collider', configTrue , turtle).addTo(scene);
+      obj.position.set(1, 1, 1);
+      obj.scale.set(10, 10, 10);
+      new NativeComponent('n-mesh-collider', configTrue , obj).addTo(scene);
     }
+    
 
     //Update & Rendering
     function render() {
