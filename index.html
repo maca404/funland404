@@ -28,10 +28,13 @@
 
     var loader = new altspace.utilities.shims.OBJMTLLoader();
     loader.load('turtle.obj', 'turtle.mtl', turtle);
-    turtle.position.set(1, 1, 1);
-    turtle.scale.set(10, 10, 10);
-    new NativeComponent('n-mesh-collider', configTrue , turtle).addTo(scene);
-  
+    
+
+    function turtle(obj) {
+      turtle.position.set(1, 1, 1);
+      turtle.scale.set(10, 10, 10);
+      new NativeComponent('n-mesh-collider', configTrue , turtle).addTo(scene);
+    }
 
     //Update & Rendering
     function render() {
