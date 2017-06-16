@@ -23,6 +23,8 @@
     type: 'environment'
     };
 
+    var offset = new THREE.Group();
+
     var scene = document.querySelector('a-scene').object3D;
     var updateRate = 500;
 
@@ -31,11 +33,13 @@
     
 
     function turtle(obj) {
+      console.log('Turtle', obj);
+      obj.scale.divideScalar(20);
       obj.position.set(1, 1, 1);
-      obj.scale.set(10, 10, 10);
-      new NativeComponent('n-mesh-collider', configTrue , obj).addTo(scene);
+      offset.add(obj);
+      new NativeComponent('n-mesh-collider', {type: 'environment', convex: false}, obj.clone()).addTo(scene);
     }
-    
+
 
     //Update & Rendering
     function render() {
